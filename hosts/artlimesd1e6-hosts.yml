@@ -1,0 +1,74 @@
+generated: '2026-09-26'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 5
+  own: 2
+  other_domain: 2
+  platform: 1
+  roles:
+  - api
+  - marketing
+  - source
+  - website
+hosts:
+- host: api.artlimes.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: artlimes.com
+  role: api
+  relation: own
+- host: api.musicartmagazine.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: musicartmagazine.com
+  role: api
+  relation: other-domain
+- host: artlimes.com
+  found_by:
+  - pointer
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Newsroom
+  - Website
+  - Documentation
+  - TermsOfService
+  - PrivacyPolicy
+  - Support
+  serves:
+  - docs
+  - cdn
+  vendor: cloudflare
+  registrable_domain: artlimes.com
+  role: website
+  relation: own
+- host: blog.musicartmagazine.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Blog
+  serves: []
+  registrable_domain: musicartmagazine.com
+  role: marketing
+  relation: other-domain
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform

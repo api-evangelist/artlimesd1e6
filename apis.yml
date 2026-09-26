@@ -1,23 +1,76 @@
 aid: artlimesd1e6
+
 name: Artlimesd1e6
-description: 'Artlimesd1e6 is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Artlimesd1e6 operates Artlimes, a global online marketplace connecting artists, galleries, and collectors to buy and sell original art, prints, design, jewellery, and NFTs. The platform offers a curated catalog across 75 countries, supports multiple payment methods, and provides tools for creators to showcase and monetize their work, aiming to democratize access to art and design worldwide.'
+
 url: https://raw.githubusercontent.com/api-evangelist/artlimesd1e6/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Marketplace
+- Art
+- Design
+- NFTs
+- E-commerce
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/artlimesd1e6-hosts.yml
+- type: Vendors
+  url: vendors/artlimesd1e6-vendors.yml
+- type: Newsroom
+  url: https://artlimes.com/press
+- type: GitHubOrganization
+  url: https://github.com/artlimes
+- type: DomainSecurity
+  url: security/artlimesd1e6-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/artlimesd1e6
+  url: https://artlimes.com
+
+- type: Documentation
+  url: https://artlimes.com/about
+- type: TermsOfService
+  url: https://artlimes.com/terms-conditions
+- type: PrivacyPolicy
+  url: https://artlimes.com/privacy-policy
+- type: Support
+  url: https://artlimes.com/help
+- type: Blog
+  url: https://blog.musicartmagazine.com/artlimes-launches-innovative-global-marketplace-art-online/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Documentation pages require JavaScript and provide no machine‑readable spec.
+  evidence:
+    - url: https://artlimes.com/openapi.json
+      status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
